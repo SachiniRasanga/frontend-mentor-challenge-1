@@ -118,8 +118,7 @@ body {
     flex: 1 1 50%;
     max-width: 375px; 
     object-fit: cover;
-
-       
+  
 }
 
     .card-image{
