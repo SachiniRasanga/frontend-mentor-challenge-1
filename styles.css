@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: hsl(233, 47%, 7%);
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -29,7 +29,7 @@ body {
 .header-image {
    
     height: 100%;
-    max-width: 540px;
+    min-width: 540px;
     object-fit: cover;
     mix-blend-mode: normal;
 }
@@ -38,13 +38,13 @@ body {
     
     justify-content: center;
     max-width:570px ;
+    margin-left: 69px;
+    margin-right: 119px;
 }
 
 .card-content h1 {
     font-size: 34px;
     margin-top: 74px;
-    margin-left: 69px;
-    margin-right: 119px;
     line-height: 40px;
     color: hsl(0, 0%, 100%);
 }
@@ -59,8 +59,6 @@ body {
     margin: 10px 0;
     font-size: 15px;
     margin-top: 30px;
-    margin-left: 69px;
-    margin-right: 119px;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
 }
@@ -70,8 +68,6 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 79px;
-    margin-left: 69px;
-    margin-right: 119px;
     margin-bottom: 64px;
     gap: 63px
 
@@ -105,64 +101,37 @@ body {
 }
 
 /* Responsive Mobile Design */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     .card {
         flex-direction: column-reverse;
         display: flex;
-        max-width: fit-content;
+        min-height: 100vh;
+        
     }
     .card-header{
    
     position: relative;
     flex: 1 1 50%;
-    max-width: 375px; 
-    object-fit: cover;
-  
+    max-width: 768px; 
+   
 }
-
-    .card-image{
-    height: auto;
-    mix-blend-mode: normal;
-    object-position: center;
-    display: flex;
-    max-width: 375px;
-
+.header-image {
+   
+    min-width: 768px;
+   
 }
-
     .card-content {
        
         text-align: center;
         gap: 15px;
         padding: 0 2px;
-        
-    }
-    .card-content h1 {
-        font-size: 25px;
-        line-height: 1.5;
-        align-items: center;
-        margin-top: 42px;
-        margin-left: 32px;
-        margin-right: 32px;
-      
-        
-    }
-
-    .card-content p {
-        font-size: 15px;
-        line-height: 1.5;
-        align-items: center;
-        margin-left: 32px;
-        margin-right: 32px;
-        margin-top: 19px;
-        margin-bottom: 47px;
-      
-        
+        margin-right: auto;
+        margin-left: auto;
+       
     }
 
     .stats {
         flex-direction:column;
-        margin-left: 121px;
-        margin-right: 121px;
         margin-bottom: 39px;
       
         
@@ -171,23 +140,35 @@ body {
         text-align: center;
         gap: 31px;
         font-size: 20px;
-    
       
     }
-    
-    .stat h2 {
-    
-        margin: 5px 0;
-        color: hsl(0, 0%, 100%);
+
+}
+/* Responsive tablet  Design*/
+
+@media (max-width: 992px) {
+    .card {
+        flex-direction: column-reverse;
+        display: flex;
+        min-height: 100vh;
+    }
+
+    .card-header{
+       
+        max-width: 992px; 
+
+    }
+    .header-image {
+       
+        min-width: 992px;
        
     }
-    
-    .stat p {
-    
-        margin: 0;
-        color: hsla(0, 0%, 100%, 0.75);
-        font-size: 10px;
-      
+
+    .card-content {
+       
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        
     }
-    
 }
